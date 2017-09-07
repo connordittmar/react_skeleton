@@ -3,11 +3,11 @@ Basic skeleton and batch file for setting up react environment on Windows.
 *NOTE: DO NOT COMMMIT node_modules to master. I am new to node.js and haven't figured out how to only keep our dependencies on the repository.*
 
 ## Quick Setup
-1.) Clone this repository 
+1. Clone this repository 
 ```git clone https://github.com/connordittmar/react_skeleton```
-2.) Install node.js from online (.exe available)
-3.) Install npm
-4.) Command line in project folder:
+2. Install node.js from online (.exe available)
+3. Install npm
+4. Command line in project folder:
 ```
 npm init
 npm install --save react react-dom
@@ -15,17 +15,17 @@ npm install --save-dev webpack
 npm install --save-dev babel-loader babel-core
 npm install --save-dev babel-cli babel-preset-react babel-preset-es2015
 ```
-5.) The webpack config from the repository is already setup, so code your app up and run:
+5. The webpack config from the repository is already setup, so code your app up and run:
 ```
 ./node_modules/.bin/webpack
 ```
 
 ## Setup Instructions (from scratch):
-Install node.js from online ( .exe available for windows )
+1. Install node.js from online ( .exe available for windows )
 
-Install npm (node package manager, dependent on node.js) (javascript equivalent of pip)
+2. Install npm (node package manager, dependent on node.js) (javascript equivalent of pip)
 
-Create your project folder and open a command line in the folder:
+3. Create your project folder and open a command line in the folder:
 ```
 npm init
 npm install --save react react-dom
@@ -36,7 +36,7 @@ echo { "presets": ["react", "es2015"] } > .babelrc
 echo 'insert web config here' > webpack.config.js
 mkdir src dist
 ```
-This will setup several things:
+4. This will setup several things:
 -Start a node module package in your working directory
 -Install react in your working directory
 -Install the babel loader and presets in working directory
@@ -61,11 +61,11 @@ module.exports = {
   }
 };
 ```
-Next, write your code and build with webpack when ready:
+5. Next, write your code and build with webpack when ready:
 ```
 ./node_modules/.bin/webpack
 ```
-You can also make that path an alias to save time by adding to the package.json file:
+6. You can also make that path an alias to save time by adding to the package.json file:
 ```
 “scripts”: {
   ...
