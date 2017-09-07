@@ -1,7 +1,26 @@
 # react_skeleton
 Basic skeleton and batch file for setting up react environment on Windows.
+*NOTE: DO NOT COMMMIT node_modules to master. I am new to node.js and haven't figured out how to only keep our dependencies on the repository.*
 
-## Setup Instructions:
+## Quick Setup
+1.) Clone this repository 
+```git clone https://github.com/connordittmar/react_skeleton```
+2.) Install node.js from online (.exe available)
+3.) Install npm
+4.) Command line in project folder:
+```
+npm init
+npm install --save react react-dom
+npm install --save-dev webpack
+npm install --save-dev babel-loader babel-core
+npm install --save-dev babel-cli babel-preset-react babel-preset-es2015
+```
+5.) The webpack config from the repository is already setup, so code your app up and run:
+```
+./node_modules/.bin/webpack
+```
+
+## Setup Instructions (from scratch):
 Install node.js from online ( .exe available for windows )
 
 Install npm (node package manager, dependent on node.js) (javascript equivalent of pip)
