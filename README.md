@@ -31,6 +31,8 @@ npm init
 npm install --save react react-dom
 npm install --save-dev webpack
 npm install --save-dev babel-loader babel-core
+npm install --save-dev lodash
+npm install --save-dev babel-plugin-lodash
 npm install --save-dev babel-cli babel-preset-react babel-preset-es2015
 echo { "presets": ["react", "es2015"] } > .babelrc
 echo 'insert web config here' > webpack.config.js
