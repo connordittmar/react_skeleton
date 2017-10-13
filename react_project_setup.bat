@@ -1,4 +1,4 @@
-call npm init
+call npm init --yes
 call npm install --save react react-dom semantic-ui-react
 call npm install --save-dev webpack
 call npm install --save-dev babel-loader babel-core babel-cli
