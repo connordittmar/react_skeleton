@@ -9,15 +9,11 @@ Basic skeleton and batch file for setting up react environment on Windows.
 3. Install npm
 4. Command line in project folder:
 ```
-npm init
-npm install --save react react-dom
-npm install --save-dev webpack
-npm install --save-dev babel-loader babel-core
-npm install --save-dev babel-cli babel-preset-react babel-preset-es2015
+>>>react_project_setup.bat
 ```
-5. The webpack config from the repository is already setup, so code your app up and run:
+5. The webpack config from the repository is already setup, so code your app up (or just use the provided example) and run the following in the command line:
 ```
-./node_modules/.bin/webpack
+>>>./node_modules/.bin/webpack
 ```
 
 ## Setup Instructions (from scratch):
@@ -28,15 +24,11 @@ npm install --save-dev babel-cli babel-preset-react babel-preset-es2015
 3. Create your project folder and open a command line in the folder:
 ```
 npm init
-npm install --save react react-dom
+npm install --save react react-dom semantic-ui-react
 npm install --save-dev webpack
-npm install --save-dev babel-loader babel-core
-npm install --save-dev lodash
-npm install --save-dev babel-plugin-lodash
-npm install --save-dev babel-cli babel-preset-react babel-preset-es2015
-echo { "presets": ["react", "es2015"] } > .babelrc
-echo 'insert web config here' > webpack.config.js
-mkdir src dist
+npm install --save-dev babel-loader babel-core babel-cli
+npm install --save-dev lodash babel-plugin-lodash
+npm install --save-dev babel-preset-stage-1 babel-preset-react babel-preset-es2015
 ```
 4. This will setup several things:
 -Start a node module package in your working directory
