@@ -4,4 +4,5 @@ call npm install --save-dev webpack
 call npm install --save-dev babel-loader babel-core babel-cli
 call npm install --save-dev lodash babel-plugin-lodash
 call npm install --save-dev babel-preset-stage-1 babel-preset-react babel-preset-es2015
+call npm install --save-dev axios
 echo React Setup Complete
