@@ -25,11 +25,9 @@ Basic skeleton and batch file for setting up react environment on Windows.
 ```
 npm init --yes
 npm install --save react react-dom semantic-ui-react
-npm install --save-dev webpack
-npm install --save-dev babel-loader babel-core babel-cli
+npm install --save-dev webpack webpack-cli babel-loader babel-core babel-cli
 npm install --save-dev lodash babel-plugin-lodash
-npm install --save-dev babel-preset-stage-1 babel-preset-react babel-preset-es2015
-npm install --save-dev axios
+npm install --save-dev babel-preset-stage-1 babel-preset-react babel-preset-es2015 axios
 
 ```
 4. This will setup several things:
