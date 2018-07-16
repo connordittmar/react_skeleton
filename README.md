@@ -68,6 +68,6 @@ module.exports = {
   “build”: “webpack”
 }
 ```
-The aboce example would make "build" an alias of webpack, meaning that from the root directory one would run ```build``` in lieu of the previous command.
+The above example would make "build" an alias of webpack, meaning that from the root directory one would run ```npm run build``` in lieu of the previous command.
 
 Remember to comma delimit your json field entries.
