@@ -8,14 +8,34 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.js$/,
           exclude: /node_modules/,
           loader: "babel-loader" },
       { test: /\.(png|svg|jpg|gif)$/,
       use: [
           'file-loader'
-      ]}
-        ]
+      ]},
+      { test: /\.css$/,
+      use: [
+          {
+              loader: 'style-loader'
+          },
+          {
+              loader: 'css-loader'
+          },
+          {
+              loader: 'sass-loader'
+          }
+      ]},
+      { test: /\.(ttf|eot|svg|woff2?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      use: [
+          {
+              loader: 'file-loader'
+          },
+      ]
+
+      }
+    ]
   }
 };
