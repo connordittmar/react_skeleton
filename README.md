@@ -1,6 +1,6 @@
 # react_skeleton
 Basic skeleton and batch file for setting up react environment on Windows.
-*NOTE: DO NOT COMMMIT node_modules to master. I am new to node.js and haven't figured out how to only keep our dependencies on the repository.*
+*NOTE: Do not commit node_modules to master. It is a complex file structure and is taken care of by npm. If you try to commit node_modules it will take forever.*
 
 ## Quick Setup
 1. Clone this repository
@@ -31,12 +31,12 @@ npm install --save-dev babel-preset-stage-1 babel-preset-react babel-preset-es20
 
 ```
 4. This will setup several things:
--Start a node module package in your working directory
--Install react in your working directory
--Install the babel loader and presets in working directory
--Create the configuration file for babel to know to include react in the list of recognized modules
--Create an empty webpack config file for setup after. The default looks like the example below, assuming that your source and -destination paths followed the convention above:
--Webpack makes it easy to put all elements of the page together and call the result on the html template that django calls up when we visit a page.
+- Start a node module package in your working directory
+- Install react in your working directory
+- Install the babel loader and presets in working directory
+- Create the configuration file for babel to know to include react in the list of recognized modules
+- Create an empty webpack config file for setup after. The default looks like the example below, assuming that your source and -destination paths followed the convention above:
+- Webpack makes it easy to put all elements of the page together and call the result on the html template that django calls up when we visit a page.
 ```
 const path = require('path');
 
@@ -47,7 +47,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.js$/,
           exclude: /node_modules/,
           loader: "babel-loader" }
@@ -59,11 +59,15 @@ module.exports = {
 ```
 ./node_modules/.bin/webpack
 ```
-6. You can also make that path an alias to save time by adding to the package.json file:
+6. View your webpage at ./dist/index.html .
+
+7. (bonus) You can also name an alias in the package.json file to replace the ./node_modules/.bin/webpack bit:
 ```
 “scripts”: {
   ...
   “build”: “webpack”
 }
 ```
+The above example would make "build" an alias of webpack, meaning that from the root directory one would run ```npm run build``` in lieu of the previous command.
+
 Remember to comma delimit your json field entries.
