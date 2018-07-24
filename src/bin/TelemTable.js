@@ -11,9 +11,9 @@ class TelemTable extends Component {
         <Container style={{ padding: '5em 0em' }}>
           <Grid columns={2}>
             <Grid.Column width={10} >
-              <MainMap />
+            <MainMap/>
             </Grid.Column>
-            <Grid.Column width={2}>
+            <Grid.Column width={10}>
             <CameraListener />
             <WebCam />
             </Grid.Column>
