@@ -16,8 +16,9 @@ class MainMap extends Component {
     return (
       <div>
         <Map center={position} zoom={this.state.zoom} MapUI>
-          <MapUI position='topright'/>
-            <TileLayer url="http://mt0.google.com/vt/lyrs=y&x={x}&y={y}&z={z}" />
+          <MapUI className='leaflet-transparent' position="bottomleft">
+          </MapUI>
+          <TileLayer url="http://mt0.google.com/vt/lyrs=y&x={x}&y={y}&z={z}" />
         </Map>
       </div>
     )

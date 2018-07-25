@@ -4,7 +4,7 @@ import {Container,Menu} from 'semantic-ui-react'
 import { MapControl, withLeaflet } from 'react-leaflet'
 import type {MapControlProps} from 'react-leaflet'
 
-class MapUI extends MapControl<LeafletElement, Props> {
+class MapUI extends MapControl {
 
   componentWillMount() {
     const legend = L.control({position: 'bottomright'});
@@ -21,4 +21,4 @@ class MapUI extends MapControl<LeafletElement, Props> {
     this.leafletElement = legend;
   }
 }
-export default withLeaflet(MapUI)
+export default MapUI
