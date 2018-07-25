@@ -8,14 +8,18 @@ class TelemTable extends Component {
   render() {
     return (
       <div>
-        <Container style={{ padding: '5em 0em' }}>
-          <Grid columns={2}>
+        <Container style={{ marginTop: '3em'}}>
+          <Grid >
             <Grid.Column width={10} >
-            <MainMap/>
+              <MainMap/>
             </Grid.Column>
-            <Grid.Column width={10}>
-            <CameraListener />
-            <WebCam />
+            <Grid.Column width={6}>
+              <Grid.Row>
+                <CameraListener />
+              </Grid.Row>
+              <Grid.Row>
+                <WebCam />
+              </Grid.Row>
             </Grid.Column>
           </Grid>
         </Container>

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Ros, Topic } from 'roslib'
-import {Image} from 'semantic-ui-react'
+import {Image, Card} from 'semantic-ui-react'
 
 class CameraListener extends Component<Props,State> {
   subscriber = new Topic({
@@ -38,7 +38,10 @@ class CameraListener extends Component<Props,State> {
   render() {
     return (
       <div>
-        <Image size='medium' src={this.state.imagedata}/>
+        <Card>
+          <Image size='medium' src={this.state.imagedata}/>
+          <Card.Content><Card.Meta>Point Grey Feed</Card.Meta></Card.Content>
+        </Card>
       </div>
     )
   };

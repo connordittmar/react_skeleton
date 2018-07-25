@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Image} from 'semantic-ui-react'
+import {Image, Label, Card} from 'semantic-ui-react'
 
 class WebCam extends Component<Props,State> {
   sourceurl = 'http://192.168.1.80/mjpg/video.mjpg';
@@ -7,7 +7,12 @@ class WebCam extends Component<Props,State> {
   render() {
     return (
       <div>
-        <Image size='medium' src={this.sourceurl}/>
+        <Card>
+          <Image size='medium' src={this.sourceurl}/>
+          <Card.Content>
+            <Card.Meta>Axis Camera Feed</Card.Meta>
+          </Card.Content>
+        </Card>
       </div>
     )
   };
