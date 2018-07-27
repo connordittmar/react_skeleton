@@ -16,6 +16,18 @@ class SettingsPanel extends Component {
           ros={this.ros}
           topic='/mavros/global_position/rel_alt'
           type='std_msgs/Float64' />
+          <Subscriber
+            ros={this.ros}
+            topic='/mavros/global_position/rel_alt'
+            type='std_msgs/Float64' />
+            <Subscriber
+              ros={this.ros}
+              topic='/mavros/global_position/rel_alt'
+              type='std_msgs/Float64' />
+              <Subscriber
+                ros={this.ros}
+                topic='/mavros/global_position/rel_alt'
+                type='std_msgs/Float64' />
         </Container>
       </div>
     )

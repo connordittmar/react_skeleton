@@ -1,41 +1,28 @@
 import L from 'leaflet'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Button,Icon} from 'semantic-ui-react'
 import { MapControl, withLeaflet } from 'react-leaflet'
-import type {MapControlProps} from 'react-leaflet'
 
 
+class MapUI extends MapControl {
 
-L.Control.Watermark = L.Control.extend({
-  onAdd: function(map) {
-    let div = L.DomUtil.create('div','');
+  componentWillMount() {
+    const legend = L.control({position: 'bottomleft'});
     const jsx = (
-      <div>
-        <Button circular icon>
-          <Icon name='location arrow'/>
-        </Button>
-        <Button circular icon>
-          <Icon name='expand'/>
-        </Button>
+      <div {...this.props}>
+        {this.props.children}
       </div>
     );
-    ReactDOM.render(jsx,div);
-    return div;
-  },
+    legend.onAdd = function(map){
+      let div = L.DomUtil.create('div','');
+      ReactDOM.render(jsx,div);
+      return div;
+    };
+    this.leafletElement = legend;
+    }
 
-  onRemove: function(map) {
-  }
-});
-
-type LeafletElement = L.Control.Watermark
-type Props = {
-  position?: string,
-} & MapControlProps
-
-class MapUI extends MapControl<LeafletElement, Props> {
-  createLeafletElement (props: Props): LeafletElement {
-    return new L.Control.Watermark(props)
+  createLeafletElement () {
+    return this.leafletElement
   }
 }
 
