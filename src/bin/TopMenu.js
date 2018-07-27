@@ -3,6 +3,14 @@ import { Container, Menu, Radio, Icon} from 'semantic-ui-react'
 import TelemetryStatusListener from './TelemetryStatusListener'
 
 class TopMenu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      network: {
+        isConnected: true}
+      };
+  }
+
   render() {
     return (
       <div>
@@ -13,7 +21,7 @@ class TopMenu extends Component {
             <Menu.Item name='network'/>
             <Menu.Menu position='right'>
               <Menu.Item><TelemetryStatusListener /></Menu.Item>
-              <Menu.Item color='green'>Network Status: Connected</Menu.Item>
+              <Menu.Item>Network Status: {this.state.network.isConnected? 'Connected' : 'OFF'}</Menu.Item>
               <Menu.Item icon='cog'/>
             </Menu.Menu>
           </Container>
