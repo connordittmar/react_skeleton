@@ -1,0 +1,53 @@
+{
+  "name": "react_skeleton",
+  "version": "1.0.0",
+  "description": "Basic skeleton and batch file for setting up react environment on Windows.\r *NOTE: DO NOT COMMMIT node_modules to master. I am new to node.js and haven't figured out how to only keep our dependencies on the repository.*",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "webpack --config test.webpack.config.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connordittmar/react_skeleton.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connordittmar/react_skeleton/issues"
+  },
+  "homepage": "https://github.com/connordittmar/react_skeleton#readme",
+  "dependencies": {
+    "leaflet": "^1.3.3",
+    "mapbox-gl": "^0.47.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-leaflet": "^2.0.0",
+    "react-leaflet-control": "^1.4.1",
+    "react-mapbox-gl": "^3.8.0",
+    "semantic-ui-react": "^0.82.0"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "lodash": "^4.17.10",
+    "node-sass": "^4.9.2",
+    "roslib": "^0.20.0",
+    "sass-loader": "^7.0.3",
+    "semantic-ui-css": "^2.3.3",
+    "style-loader": "^0.21.0",
+    "ttf-loader": "^1.0.2",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8"
+  }
+}
