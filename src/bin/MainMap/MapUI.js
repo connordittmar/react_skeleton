@@ -7,7 +7,7 @@ import { MapControl, withLeaflet } from 'react-leaflet'
 class MapUI extends MapControl {
 
   componentWillMount() {
-    const legend = L.control({position: 'bottomleft'});
+    const ui_element = L.control({position: 'bottomleft'});
     const jsx = (
       <div {...this.props}>
         {this.props.children}
@@ -18,7 +18,7 @@ class MapUI extends MapControl {
       ReactDOM.render(jsx,div);
       return div;
     };
-    this.leafletElement = legend;
+    this.leafletElement = ui_element;
     }
 
   createLeafletElement () {

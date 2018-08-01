@@ -1,0 +1,4 @@
+node_modules
+dist/[0-9]*
+dist/[a-f]*
+dist/*.js
