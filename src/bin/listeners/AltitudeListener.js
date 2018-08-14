@@ -13,7 +13,7 @@ class AltitudeListener extends Component<Props,State> {
   state = {
     index: -1,
     message: {},
-    rate: null,
+    altitude: null,
     messageCount: 0,
   }
 

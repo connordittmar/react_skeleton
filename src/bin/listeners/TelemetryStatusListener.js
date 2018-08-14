@@ -7,7 +7,7 @@ class TelemetryStatusListener extends Component<Props,State> {
       url: this.props.url
     }),
     name: '/connections/judges/hz',
-    messageType: 'std_msgs/Float64'
+    messageType: 'std_msgs/Float32'
   })
 
   state = {
