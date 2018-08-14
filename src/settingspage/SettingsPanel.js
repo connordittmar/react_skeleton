@@ -10,7 +10,7 @@ class SettingsPanel extends Component {
   render () {
     return (
       <div>
-        <TopMenu/>
+        <TopMenu url={this.props.url}/>
         <Container style={{marginTop:'3em'}}>
         <Subscriber
           ros={this.ros}
