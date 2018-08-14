@@ -13,7 +13,7 @@ class MapUI extends MapControl {
         {this.props.children}
       </div>
     );
-    legend.onAdd = function(map){
+    ui_element.onAdd = function(map){
       let div = L.DomUtil.create('div','');
       ReactDOM.render(jsx,div);
       return div;

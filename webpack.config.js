@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
   entry: {
     index: './src/mapviewpage/index.js',
-    settings: './src/settingspage/settings.js'
+    settings: './src/settingspage/settings.js',
+    judgesview: './src/judgespage/judgesview.js'
   },
   output: {
     filename: '[name].js',

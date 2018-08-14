@@ -16,13 +16,11 @@ class TopMenu extends Component {
       <div>
         <Menu fixed='top' inverted>
           <Container>
-            <Menu.Item name='telemetry' />
-            <Menu.Item name='imaging'/>
-            <Menu.Item name='network'/>
+            <Menu.Item href='index.html' name='Main' />
             <Menu.Menu position='right'>
               <Menu.Item><TelemetryStatusListener /></Menu.Item>
               <Menu.Item>Network Status: {this.state.network.isConnected? 'Connected' : 'OFF'}</Menu.Item>
-              <Menu.Item icon='cog'/>
+              <Menu.Item href='settings.html' icon='cog'/>
             </Menu.Menu>
           </Container>
         </Menu>

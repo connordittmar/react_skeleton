@@ -8,7 +8,7 @@ class WebCam extends Component<Props,State> {
     return (
       <div>
         <Card>
-          <Image size='medium' src={this.sourceurl}/>
+          <Image src={this.sourceurl} fluid/>
           <Card.Content>
             <Card.Meta>Axis Camera Feed</Card.Meta>
           </Card.Content>

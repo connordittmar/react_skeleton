@@ -5,7 +5,7 @@ import TopMenu from '../bin/TopMenu'
 import Subscriber from '../rosutils/Subscriber'
 class SettingsPanel extends Component {
 
-  ros = new Ros({url:'ws://192.168.1.40:8080'})
+  ros = new Ros({url:'ws://127.0.0.1:8080'})
 
   render () {
     return (
@@ -28,6 +28,10 @@ class SettingsPanel extends Component {
                 ros={this.ros}
                 topic='/mavros/global_position/rel_alt'
                 type='std_msgs/Float64' />
+          <Subscriber
+            ros={this.ros}
+            topic='/connections/judges/hz'
+            type='std_msgs/Float64' />
         </Container>
       </div>
     )

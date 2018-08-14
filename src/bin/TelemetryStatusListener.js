@@ -4,7 +4,7 @@ import { Ros, Topic } from 'roslib'
 class TelemetryStatusListener extends Component<Props,State> {
   subscriber = new Topic({
     ros: new Ros({
-      url: "ws://192.168.1.10:8080"
+      url: "ws://localhost:8080"
     }),
     name: '/connections/judges/hz',
     messageType: 'std_msgs/Float64'
@@ -34,11 +34,19 @@ class TelemetryStatusListener extends Component<Props,State> {
     });
   }
 
+  formatItem = (item: float) => {
+    if (item != null) {
+      return item.toFixed(2)
+    }
+    else {
+      return item
+    }
+  }
 
   render() {
     return (
       <div>
-        <p> Telemetry: {this.state.rate} </p>
+        <p> Telemetry: {this.formatItem(this.state.rate)} hz</p>
       </div>
     )
   };
