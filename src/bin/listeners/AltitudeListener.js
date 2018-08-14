@@ -1,20 +1,19 @@
 import React, {Component} from 'react'
 import { Ros, Topic } from 'roslib'
-import {Image, Card} from 'semantic-ui-react'
 
-class CameraListener extends Component<Props,State> {
+class AltitudeListener extends Component<Props,State> {
   subscriber = new Topic({
     ros: new Ros({
-      url: "ws://192.168.1.40:8080"
+      url: this.props.url
     }),
-    name: '/camera/image/compressed',
-    messageType: 'sensor_msgs/CompressedImage'
+    name: '/mavros/global_position/rel_alt',
+    messageType: 'std_msgs/Float64'
   })
 
   state = {
     index: -1,
     message: {},
-    imagedata: null,
+    rate: null,
     messageCount: 0,
   }
 
@@ -30,20 +29,26 @@ class CameraListener extends Component<Props,State> {
       this.setState(prevState => ({
         message: message,
         messageCount: prevState.messageCount += 1,
-        imagedata: "data:/image/jpg;base64," + message.data,
+        altitude: message.data,
       }));
     });
+  }
+
+  formatItem = (item: float) => {
+    if (item != null) {
+      return item.toFixed(2)
+    }
+    else {
+      return item
+    }
   }
 
   render() {
     return (
       <div>
-        <Card>
-          <Image size='medium' src={this.state.imagedata}/>
-          <Card.Content><Card.Meta>Point Grey Feed</Card.Meta></Card.Content>
-        </Card>
+        <p> Altitude MSL: {this.formatItem(this.state.altitude)}</p>
       </div>
     )
   };
 }
-export default CameraListener
+export default AltitudeListener

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Container, Segment, Grid, Header } from 'semantic-ui-react'
 import MainMap from './MainMap/MainMap'
-import CameraListener from './CameraListener'
+import CameraListener from './listeners/CameraListener'
 import WebCam from './WebCam'
 
 class TelemTable extends Component {
@@ -15,7 +15,7 @@ class TelemTable extends Component {
             </Grid.Column>
             <Grid.Column width={6}>
               <Grid.Row>
-                <CameraListener />
+                <CameraListener url={this.props.url}/>
               </Grid.Row>
               <Grid.Row>
                 <WebCam />

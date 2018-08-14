@@ -4,7 +4,7 @@ import { Ros, Topic } from 'roslib'
 class TelemetryStatusListener extends Component<Props,State> {
   subscriber = new Topic({
     ros: new Ros({
-      url: "ws://localhost:8080"
+      url: this.props.url
     }),
     name: '/connections/judges/hz',
     messageType: 'std_msgs/Float64'

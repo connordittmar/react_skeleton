@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import { Container, Menu, Radio, Icon} from 'semantic-ui-react'
-import TelemetryStatusListener from './listeners/TelemetryStatusListener'
-import BatteryListener from './listeners/BatteryListener'
-import AltitudeListener from './listeners/AltitudeListener'
-class TopMenu extends Component {
+import TelemetryStatusListener from '../bin/listeners/TelemetryStatusListener'
+import AltitudeListener from '../bin/listeners/AltitudeListener'
+
+class TopJudgesBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,13 +17,10 @@ class TopMenu extends Component {
       <div>
         <Menu fixed='top' inverted>
           <Container>
-            <Menu.Item href='index.html' name='Main' />
             <Menu.Item><AltitudeListener url={this.props.url}/></Menu.Item>
-            <Menu.Item><BatteryListener url={this.props.url}/></Menu.Item>
             <Menu.Menu position='right'>
-              <Menu.Item><TelemetryStatusListener url={this.props.url}/></Menu.Item>
+              <Menu.Item><TelemetryStatusListener /></Menu.Item>
               <Menu.Item>Network Status: {this.state.network.isConnected? 'Connected' : 'OFF'}</Menu.Item>
-              <Menu.Item href='settings.html' icon='cog'/>
             </Menu.Menu>
           </Container>
         </Menu>
@@ -31,4 +28,4 @@ class TopMenu extends Component {
     )
   };
 }
-export default TopMenu
+export default TopJudgesBar

@@ -5,4 +5,4 @@ import 'semantic-ui-css/semantic.min.css';
 import 'leaflet/dist/leaflet.css';
 import App from '../bin/App'
 
-render(<App /> , document.getElementById('root'))
+render(<App url="ws://192.168.1.40:8080"/> , document.getElementById('root'))

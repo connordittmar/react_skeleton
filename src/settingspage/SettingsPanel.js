@@ -5,7 +5,7 @@ import TopMenu from '../bin/TopMenu'
 import Subscriber from '../rosutils/Subscriber'
 class SettingsPanel extends Component {
 
-  ros = new Ros({url:'ws://127.0.0.1:8080'})
+  ros = new Ros({url:this.props.url})
 
   render () {
     return (
